@@ -23,10 +23,6 @@ app.use('/', indexRoute)
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
-app.get('*', function (req, res) {
-  res.send('hi there')
-})
-
 var server = app.listen(9000, () => {
   console.log("Server listening on port 9000")
 })
