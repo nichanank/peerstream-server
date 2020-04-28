@@ -30,7 +30,7 @@ const peerServer = ExpressPeerServer(server, {
   path: '/'
 })
 
-app.use('/', peerServer);
+app.use('/peerjs', peerServer);
 
 peerServer.on('connection', client => {
   console.log('New connection to server. Client ID: ' + client.id)
