@@ -23,8 +23,8 @@ app.use('/', indexRoute)
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
-app.get('/', function (req, res) {
-  res.send(JSON.stringify({ Hello: 'World'}))
+app.get('*', function (req, res) {
+  res.send('hi there')
 })
 
 var server = app.listen(9000, () => {
