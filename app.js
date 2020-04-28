@@ -9,8 +9,6 @@ const indexRoute = require('./routes')
 
 const { ExpressPeerServer } = require('peer')
 
-require('dotenv').config()
-
 app.use(express.json())        // support JSON-encoded bodies
 app.use(express.urlencoded({     // support URL-encoded bodies
   extended: true
