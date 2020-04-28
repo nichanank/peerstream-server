@@ -21,7 +21,7 @@ app.use('/', indexRoute)
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
-var server = app.listen(9000, () => {
+var server = app.listen(9000, '0.0.0.0', () => {
   console.log("Server listening on port 9000")
 })
 
@@ -44,6 +44,9 @@ peerServer.on('error', error => {
   console.log(error)
 })
 
+app.get('/', function(req, res) {
+  res.send("this is working")
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
